@@ -1,0 +1,99 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    🌱 Profile
+
+With over a decade of hands-on experience in gardening, plant rescue, and sustainable landscape design, I’ve helped individuals, families, and businesses create thriving green spaces — indoors and out. My approach is rooted in understanding each plant’s unique needs and each client's lifestyle, so every space grows with intention.
+
+Whether I’m reviving a struggling pothos or designing a rooftop jungle, I believe gardening is more than aesthetics — it's a living, breathing practice of care.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Diploma in Horticulture & Plant Science"
+      subtitle="[2012] to [2014] at [SVM], [VARANSI], [INDIA]"
+    />
+    <TimeLineElement
+      title="Certificate in Landscape & Garden Design"
+      subtitle="[2014] to [2016] at [HBTI], [KANPUR], [INDIA]"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Senior Garden Designer at Living Roots Studio"
+      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+    >
+     Designed sustainable garden spaces for urban apartments, cafés, and terrace gardens.
+
+Led workshops on indoor plant care and composting techniques.
+
+Consulted over 100+ clients on plant selection, layout, and maintenance plans.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Freelance Gardener & Plant Consultant"
+      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+    >
+      Designed sustainable garden spaces for urban apartments, cafés, and terrace gardens.
+
+Led workshops on indoor plant care and composting techniques.
+
+Consulted over 100+ clients on plant selection, layout, and maintenance plans.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Assistant Gardener at Urban Green Project"
+      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+    >
+      Supported large-scale community garden installations.
+
+Helped maintain soil health and plant diversity across multiple sites.
+
+Assisted senior botanists in workshops for schools and eco-clubs.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="#" target="_blank"> Sustainable Urban Gardening – Coursera</a>
+    </li>
+    <li>
+      <a href="#" target="_blank"> Indoor Plant Care & Styling (https://www.udemy.com/))</a>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>Garden & Landscape Design</li>
+    <li>Indoor Plant Styling</li>
+    <li>Plant Diagnosis & Rescue</li>
+    <li>Watering & Irrigation Planning</li>
+    <li>Soil Health & Composting</li>
+    <li>Low-Maintenance Greenery</li>
+    <li>Vertical & Balcony Gardening</li>
+    <li>Seasonal Plant Rotation</li>
+    
+  </ul>
+</BaseLayout>
