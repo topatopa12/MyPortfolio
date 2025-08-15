@@ -40,8 +40,8 @@ const handleSubmit = async (event) => {
     data-netlify="true" 
     data-netlify-honeypot="bot-field" 
     action="/success" 
-    onsubmit="handleSubmit(event)" 
-    // ^ Add onsubmit event if you're handling submission with JS and not relying purely on Netlify
+   
+
 >
     <input type="hidden" name="form-name" value="contact" />
     <p class="hidden">
@@ -50,6 +50,10 @@ const handleSubmit = async (event) => {
 
     <p>
         <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </p>
+    <p>
+        <label for="name">SurName:</label>
         <input type="text" id="name" name="name" required>
     </p>
 
