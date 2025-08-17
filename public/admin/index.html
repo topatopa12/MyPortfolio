@@ -5,10 +5,17 @@
     <title>Content Manager</title>
   </head>
   <body>
-    <!-- Load CMS -->
+    <!-- Load Netlify CMS script from /cms folder -->
     <script src="/cms/netlify-cms.js"></script>
+
     <script>
-      NetlifyCmsApp.init({ configPath: "/admin/config.yml" });
+      window.CMS_MANUAL_INIT = true;
+
+      window.addEventListener("DOMContentLoaded", function () {
+        NetlifyCmsApp.init({
+          configPath: "/admin/config.yml",
+        });
+      });
     </script>
   </body>
 </html>
