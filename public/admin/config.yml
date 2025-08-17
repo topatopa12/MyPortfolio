@@ -1,29 +1,17 @@
 backend:
   name: git-gateway
-  branch: main   # or "master" depending on your repo
+  branch: main # or 'master' depending on your repo
 
-media_folder: "public/uploads"   # where images go
+media_folder: "public/uploads" # where uploaded images go
 public_folder: "/uploads"
 
 collections:
   - name: "blog"
-    label: "Blog Posts"
+    label: "Blog"
     folder: "src/content/blog"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "YouTube Video", name: "youtube", widget: "string", required: false }
-
-  - name: "gallery"
-    label: "Image Gallery"
-    folder: "src/content/gallery"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Description", name: "description", widget: "text", required: false }
