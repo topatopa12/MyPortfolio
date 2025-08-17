@@ -1,21 +1,29 @@
 backend:
   name: git-gateway
-  branch: main   # change if your repo branch is not "main"
+  branch: main   # or "master" depending on your repo
 
-media_folder: "public/uploads"   # where images get saved in your repo
-public_folder: "/uploads"        # how they are shown on the site
+media_folder: "public/uploads"   # where images go
+public_folder: "/uploads"
 
 collections:
   - name: "blog"
-    label: "Blog"
-    folder: "src/content/blog"   # location of your blog posts
+    label: "Blog Posts"
+    folder: "src/content/blog"
     create: true
     slug: "{{slug}}"
     fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "description", label: "Description", widget: "string" }
-      - { name: "pubDate", label: "Publish Date", widget: "datetime" }
-      - { name: "heroImage", label: "Hero Image", widget: "image", required: false }
-      - { name: "badge", label: "Badge", widget: "string", required: false }
-      - { name: "tags", label: "Tags", widget: "list", required: false }
-      - { name: "body", label: "Content", widget: "markdown" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "YouTube Video", name: "youtube", widget: "string", required: false }
+
+  - name: "gallery"
+    label: "Image Gallery"
+    folder: "src/content/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "text", required: false }
